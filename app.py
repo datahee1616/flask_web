@@ -18,5 +18,9 @@ def articles():
     list_data = Articles()
     return render_template('articles.html', data=list_data)
 
+@app.route('/detail/<ids>') # <ids> : 파라미터 처리. 변하는 값이 들어오면 자동으로 바꿔서 들어가도록 함 
+def detail(ids): 
+    return int(ids)
+
 if __name__ == '__main__':
     app.run(debug=True)
